@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import os
 import sys
 from colorama import Fore, Back, Style
@@ -21,12 +20,12 @@ if len(argvs) == 0 or len(argvs) > 2:
         print(error('ERROR: No arguments given.'))
     else:
         print(error('ERROR: Too many arguments given.'))
-    print(error('Usage: path-maker.py <path> <start-directory(OPTIONAL)>'))
-    print('Use "python3 path-maker.py --help" for more information.')
+    print(error('Usage: pfm <path> <start-directory(OPTIONAL)>'))
+    print('Use "pfm --help" for more information.')
     sys.exit(1)
 if argvs[0] == '-h' or argvs[0] == '--help':
-    print('USAGE: python3 path-maker.py [path] [start-folder (if you want to start from a specific folder)]')
-    print('Example One: python3 path-maker.py /folder1/folder2/folder3/file.txt\nExample Two: python3 path-maker.py /folder1/folder2/folder3/file.txt /folder1/folder2/folder3\n')
+    print('USAGE: pfm [path] [start-folder (if you want to start from a specific folder)]')
+    print('Example One: pfm /folder1/folder2/folder3/file.txt\nExample Two: python3 pfm /folder1/folder2/folder3/file.txt /folder1/folder2/folder3\n')
     sys.exit(0)
 
 path = argvs[0].split('/')
